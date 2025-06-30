@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studentfeedback</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <header class="container-fluid shadow-sm py-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-light">StudentFeedBack</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container-fluid mt-4">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div
+            class="col-11 col-lg-6 col-sm-9 shadow-lg p-3 my-3 bg-light"
+            id="login"
+          >
+            <h2 class="text-center mt-3">LOGIN</h2>
+            <form class="col-8 m-auto py-3" action="" method="post">
+              <div class="inputfield mb-2">
+                <label for="email" class="form-label m-auto">email: </label
+                ><br />
+                <input
+                  type="email"
+                  class="form-control p-1"
+                  name="email"
+                  id="login_email"
+                  required
+                />
+              </div>
+              <div class="inputfield mb-2">
+                <label for="password" class="form-label m-auto"
+                  >password: </label
+                ><br />
+                <input
+                  type="password"
+                  class="form-control p-1"
+                  name="password"
+                  id="login_password"
+                  required
+                />
+              </div>
+              <button
+                type="button"
+                class="container text-light my-2 p-1 btn btn-primary btns"
+                onclick="fetchUsers()"
+              >
+                LOGIN
+              </button>
+            </form>
+            <p class="text-center py-3">
+              You don't have account?
+              <a href="#" onclick="switch_to_signup()">SignUp</a>
+            </p>
+          </div>
+          <div
+            class="col-11 col-lg-6 col-sm-9 shadow-lg p-2 my-3 bg-light d-none"
+            id="signup"
+          >
+            <h2 class="text-center mt-1">SIGNUP</h2>
+            <form class="col-8 m-auto py-1" action="" method="post">
+              <div class="inputfield mb-2">
+                <label for="full_name" class="form-label m-auto">name: </label
+                ><br />
+                <input
+                  type="text"
+                  class="form-control p-1"
+                  name="full_name"
+                  id="full_name"
+                />
+              </div>
+              <div class="inputfield mb-2">
+                <label for="username" class="form-label m-auto"
+                  >username: </label
+                ><br />
+                <input
+                  type="text"
+                  class="form-control p-1"
+                  name="username"
+                  id="username"
+                />
+              </div>
+              <div class="inputfield mb-2">
+                <label for="email" class="form-label m-auto">email: </label
+                ><br />
+                <input
+                  type="email"
+                  class="form-control p-1"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="inputfield mb-2">
+                <label for="contact" class="form-label m-auto">contact: </label
+                ><br />
+                <input
+                  type="contact"
+                  class="form-control p-1"
+                  name="contact"
+                  id="contact"
+                />
+              </div>
+              <div class="inputfield mb-2">
+                <label for="password" class="form-label m-auto"
+                  >password: </label
+                ><br />
+                <input
+                  type="password"
+                  class="form-control p-1"
+                  name="password"
+                  id="password"
+                />
+              </div>
+              <div class="inputfield mb-2" id="gender">
+                <label class="form-label">gender:</label><br />
+
+                <input
+                  type="radio"
+                  class="ms-3"
+                  id="male"
+                  name="gender"
+                  value="M"
+                />
+                <label for="male" class="form-label">Male</label>
+
+                <input
+                  type="radio"
+                  class="ms-3"
+                  id="female"
+                  name="gender"
+                  value="F"
+                />
+                <label for="female" class="form-label">Female</label>
+
+                <input
+                  type="radio"
+                  class="ms-3"
+                  id="other"
+                  name="gender"
+                  value="O"
+                />
+                <label for="other" class="form-label">Other</label>
+              </div>
+              <div class="inputfield mb-2">
+                <label for="dob" class="form-label">Date of Birth:</label>
+                <input
+                  type="date"
+                  id="dob"
+                  class="form-control p-1"
+                  name="dob"
+                />
+              </div>
+              <button
+                type="button"
+                class="container text-light my-2 mb-4 p-1 btn btn-primary btns"
+                onclick="register_btn_click()"
+              >
+                REGISTER
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

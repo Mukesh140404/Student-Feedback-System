@@ -1,0 +1,10 @@
+@media (max-width: 767.98px){
+    .sidebar{
+        display: none;
+    }
+}
+ @media screen and (orientation: landscape) {
+    .container {
+      flex-direction: row;
+    }
+  }
