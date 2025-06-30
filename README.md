@@ -21,6 +21,6 @@ A login-based system for students to submit feedback and for admins to securely 
 4. Run on XAMPP/WAMP/LAMP server
 
 ## 📧 Contact
-**Mukesh Arya**  
+**Mukesh chandra Arya**  
 📬 mukeshchandraarya545@gmail.com 
 🔗 [LinkedIn](https://www.linkedin.com/in/mukesh-chandra-arya-553604295/)
